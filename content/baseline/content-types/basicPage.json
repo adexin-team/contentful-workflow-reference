@@ -1,0 +1,43 @@
+{
+  "fields": [
+    {
+      "disabled": false,
+      "id": "title",
+      "localized": true,
+      "name": "title",
+      "omitted": false,
+      "required": true,
+      "type": "Symbol",
+      "validations": []
+    },
+    {
+      "disabled": false,
+      "id": "url",
+      "localized": true,
+      "name": "url",
+      "omitted": false,
+      "required": true,
+      "type": "Symbol",
+      "validations": []
+    }
+  ],
+  "name": "Fictional basic page",
+  "sys": {
+    "environment": {
+      "sys": {
+        "id": "preview-sandbox",
+        "linkType": "Environment",
+        "type": "Link"
+      }
+    },
+    "id": "basicPage",
+    "space": {
+      "sys": {
+        "id": "demoSpace123",
+        "linkType": "Space",
+        "type": "Link"
+      }
+    },
+    "type": "ContentType"
+  }
+}

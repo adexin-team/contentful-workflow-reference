@@ -1,0 +1,26 @@
+{
+  "fields": {
+    "title": {
+      "en-US": "Fictional compass illustration"
+    }
+  },
+  "sys": {
+    "environment": {
+      "sys": {
+        "id": "preview-sandbox",
+        "linkType": "Environment",
+        "type": "Link"
+      }
+    },
+    "id": "heroImage",
+    "space": {
+      "sys": {
+        "id": "demoSpace123",
+        "linkType": "Space",
+        "type": "Link"
+      }
+    },
+    "type": "Asset",
+    "updatedAt": "2026-01-01T00:00:00.000Z"
+  }
+}

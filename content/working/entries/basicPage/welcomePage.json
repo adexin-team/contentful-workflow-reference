@@ -1,0 +1,36 @@
+{
+  "fields": {
+    "title": {
+      "en-US": "Northwind Field Notes — Reviewed draft"
+    },
+    "url": {
+      "en-US": "/"
+    }
+  },
+  "sys": {
+    "contentType": {
+      "sys": {
+        "id": "basicPage",
+        "linkType": "ContentType",
+        "type": "Link"
+      }
+    },
+    "environment": {
+      "sys": {
+        "id": "preview-sandbox",
+        "linkType": "Environment",
+        "type": "Link"
+      }
+    },
+    "id": "welcomePage",
+    "space": {
+      "sys": {
+        "id": "demoSpace123",
+        "linkType": "Space",
+        "type": "Link"
+      }
+    },
+    "type": "Entry",
+    "updatedAt": "2026-01-01T00:00:00.000Z"
+  }
+}

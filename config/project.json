@@ -1,0 +1,9 @@
+{
+  "defaultLocale": "en-US",
+  "gatsbyRepositoryPath": "gatsby-example",
+  "previewEnvironment": "preview-sandbox",
+  "productionAlias": "live-alias",
+  "productionEnvironment": "live-sandbox",
+  "reviewPort": 4173,
+  "spaceId": "demoSpace123"
+}

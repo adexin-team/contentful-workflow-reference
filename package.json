@@ -1,0 +1,42 @@
+{
+  "name": "contentful-gatsby-workflow-reference",
+  "version": "1.0.0",
+  "description": "Fail-closed reference workflow for reviewed Contentful content changes with Gatsby preview verification",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20.19.0 <25"
+  },
+  "scripts": {
+    "build:gatsby": "node scripts/check-runtime.mjs && node --require=./test/outbound-denial.cjs scripts/run-offline-check.mjs gatsby",
+    "check": "node scripts/check-runtime.mjs && node --require=./test/outbound-denial.cjs scripts/run-offline-check.mjs check",
+    "content:apply": "tsx scripts/apply-preview.ts",
+    "content:bootstrap-example": "tsx scripts/bootstrap-example.ts",
+    "content:changeset": "tsx scripts/create-changeset.ts",
+    "content:close-cycle": "tsx scripts/close-cycle.ts",
+    "content:promote:execute": "tsx scripts/execute-production-promotion.ts",
+    "content:promote:prepare": "tsx scripts/prepare-production-promotion.ts",
+    "content:sync": "tsx scripts/pull-contentful.ts",
+    "content:validate": "tsx scripts/validate.ts",
+    "manifest:verify": "node scripts/verify-manifest.mjs",
+    "preview:gatsby:refresh": "tsx scripts/refresh-gatsby-preview.ts",
+    "preview:gatsby:start": "tsx scripts/start-gatsby-preview.ts",
+    "runtime:check": "node scripts/check-runtime.mjs",
+    "test": "node scripts/check-runtime.mjs && node --require=./test/outbound-denial.cjs scripts/run-offline-check.mjs test",
+    "typecheck": "node scripts/check-runtime.mjs && node --require=./test/outbound-denial.cjs scripts/run-offline-check.mjs typecheck"
+  },
+  "keywords": ["contentful", "gatsby", "content-workflow", "review"],
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "gatsby": "5.14.6",
+    "gatsby-source-contentful": "8.16.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "tsx": "^4.23.7",
+    "typescript": "^7.0.2"
+  }
+}

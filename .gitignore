@@ -1,0 +1,6 @@
+.env
+.tmp/
+gatsby-example/.cache/
+gatsby-example/public/
+node_modules/
+reports/
