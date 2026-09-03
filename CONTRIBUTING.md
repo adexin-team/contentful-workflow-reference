@@ -4,7 +4,7 @@ Keep the example fictional, deterministic, and offline-testable. Do not add
 credentials, customer content, private URLs, repository history, generated
 dependency directories, or project-specific schema assumptions.
 
-Use Node.js `>=20.19.0 <25`, npm, Git, and the POSIX tools listed in the README.
+Use Node.js `>=22 <25`, npm, Git, and the POSIX tools listed in the README.
 From a pristine checkout run:
 
 ```bash

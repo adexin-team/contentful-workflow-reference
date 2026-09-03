@@ -1,4 +1,4 @@
-const MINIMUM = [20, 19, 0]
+const MINIMUM = [22, 0, 0]
 const EXCLUSIVE_MAXIMUM_MAJOR = 25
 
 export function parseNodeVersion(value) {
@@ -16,7 +16,7 @@ export function isSupportedNodeVersion(value) {
 
 export function assertSupportedNodeVersion(value = process.version) {
   if (!isSupportedNodeVersion(value)) {
-    throw new Error(`Unsupported Node.js ${value}; use >=20.19.0 <25`)
+    throw new Error(`Unsupported Node.js ${value}; use >=22 <25`)
   }
 }
 

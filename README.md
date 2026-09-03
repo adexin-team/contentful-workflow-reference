@@ -189,7 +189,7 @@ This reference does not make the Contentful subscription itself cheaper. Its pot
 
 Requirements:
 
-- Node.js `>=20.19.0 <25`;
+- Node.js `>=22 <25`;
 - npm;
 - Git;
 - macOS or Linux with `sh`, `tar`, `ps`, `lsof`, and standard file utilities.

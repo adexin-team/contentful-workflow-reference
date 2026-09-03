@@ -42,6 +42,7 @@ fs.mkdirSync(harnessHome, { recursive: true, mode: 0o700 })
 fs.mkdirSync(emptyGitTemplate, { recursive: true, mode: 0o700 })
 const safePath = [...new Set([path.dirname(process.execPath), "/usr/bin", "/bin"])].join(path.delimiter)
 const gitBinary = fs.existsSync("/usr/bin/git") ? "/usr/bin/git" : "git"
+const getconfBinary = fs.existsSync("/usr/bin/getconf") ? "/usr/bin/getconf" : "getconf"
 const tarBinary = fs.existsSync("/usr/bin/tar") ? "/usr/bin/tar" : "tar"
 const exact = (args, expected) => args.length === expected.length && args.every((value, index) => value === expected[index])
 const plainString = value => typeof value === "string" && value.length > 0 && !value.includes("\0")
@@ -140,6 +141,7 @@ function assertLocalCommand(command, args, cwd) {
   if (path.isAbsolute(command) && safeEsbuild(command, args)) return command
   if (path.isAbsolute(command) && safeNativeTsc(command, args)) return command
   if ((command === "git" || path.resolve(command) === path.resolve(gitBinary)) && safeGit(args, cwd)) return gitBinary
+  if ((command === "getconf" || path.resolve(command) === path.resolve(getconfBinary)) && exact(args, ["GNU_LIBC_VERSION"])) return getconfBinary
   if ((command === "tar" || path.resolve(command) === path.resolve(tarBinary)) && safeTar(args)) return tarBinary
   throw new Error(`Spawned command is denied by the outbound harness: ${path.basename(command)} ${args.join(" ")}`)
 }

@@ -7,8 +7,8 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "sha256": "099898ac5ed6341c86bdfbd2e7d47f57e5d75037f4906ec6b30644438122e903",
-      "size": 465
+      "sha256": "fc2bb454c32116754a16091df997ca1b89e967f29274d4b02c4655ad3e8b7f77",
+      "size": 456
     },
     {
       "path": ".gitignore",
@@ -22,8 +22,8 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "sha256": "d4a1bb80060e3b9c1acd6c7d2f7fd798ff87f164547070e7925a71512eb31bbc",
-      "size": 991
+      "sha256": "df143cf8365296c81011069e89b800cee37a3e0ebbf293dedeb29ad37b15d255",
+      "size": 986
     },
     {
       "path": "LICENSE",
@@ -32,8 +32,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "d573d933cec7e8bfc4984992bce22faaaebd4da94c73ffcd580cbdd0e26c433b",
-      "size": 22478
+      "sha256": "dba0cef6bae9a907646345574b956eb01ee6d06363643eade2e100afc8b514e6",
+      "size": 22473
     },
     {
       "path": "SECURITY.md",
@@ -102,13 +102,13 @@
     },
     {
       "path": "gatsby-example/package-lock.json",
-      "sha256": "2b90d8c99a327e0fe0a76ee1a17371aff3028b4e87b5a1816030edf5f6a91487",
-      "size": 731158
+      "sha256": "24b41f910f3ab8ebc19efc62399f46ca3e4984a5586757bf4eafacd72a8dda7b",
+      "size": 731153
     },
     {
       "path": "gatsby-example/package.json",
-      "sha256": "d03cd7817c6f18b279ec3de7315b6cb2d6a5e74f859165c47968387afc692edb",
-      "size": 276
+      "sha256": "376047764c47bd0a26af95822979f92e67065366432029371b16279065629061",
+      "size": 271
     },
     {
       "path": "gatsby-example/src/pages/index.js",
@@ -117,13 +117,13 @@
     },
     {
       "path": "package-lock.json",
-      "sha256": "83802f25514766682c1741d0df3b3c5dea82fc39b80f354b0646258012dc1000",
-      "size": 744856
+      "sha256": "81aceab2125f6cf1a084960d8a0e34e9ba597f456013bdac2028dc3f980460e0",
+      "size": 744563
     },
     {
       "path": "package.json",
-      "sha256": "e7e947c32b1673a11a3d5e92ec736e0d7b2e7a487f173b8b26a1c18385f74594",
-      "size": 1947
+      "sha256": "db4a30865f67620310689b480e84e54412a70c0c00f8e4c2c05376e5373cd7af",
+      "size": 1940
     },
     {
       "path": "scripts/apply-preview.ts",
@@ -142,8 +142,8 @@
     },
     {
       "path": "scripts/check-runtime.mjs",
-      "sha256": "5c4586d6ad35f3c9732561a071d68b5a852f2a7cc1a20169f3c4f20b6fdfe65f",
-      "size": 925
+      "sha256": "9de65dcedb58dce58cc56a20bead2c07b30df921aa62694f2496d2e22457c331",
+      "size": 919
     },
     {
       "path": "scripts/close-cycle.ts",
@@ -292,13 +292,13 @@
     },
     {
       "path": "test/outbound-denial.cjs",
-      "sha256": "cf82e2f45fa53ee781c0b7f52d799877941b0180b00d57d7f968d805e02a31b6",
-      "size": 17722
+      "sha256": "23ef24bac99c17f6e815cef779748c87dfacfcd32154605cc4279220aa6b71e5",
+      "size": 17957
     },
     {
       "path": "test/reference.test.ts",
-      "sha256": "cdda56f9ed3d9b31f4097c3deca22e460ef253484fbd6cd32d44a8278f2aed8a",
-      "size": 45984
+      "sha256": "13ba6400584755c4f14de56aa0e2a9a034e98782aebceac8d1882c7d9cdcbe4c",
+      "size": 46072
     },
     {
       "path": "test/worker-network-probe.cjs",

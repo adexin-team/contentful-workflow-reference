@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "engines": {
-    "node": ">=20.19.0 <25"
+    "node": ">=22 <25"
   },
   "dependencies": {
     "gatsby": "5.14.6",

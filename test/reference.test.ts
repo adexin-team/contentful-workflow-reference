@@ -236,6 +236,7 @@ test("outbound denial covers direct, promise, datagram, process, and propagated 
     () => new SocketConstructor("udp4").send(Buffer.from("x"), 53, "example.invalid"),
     () => childProcess.spawnSync("curl", ["https://example.invalid"]), () => childProcess.spawnSync("git", ["fetch", "origin"]),
     () => childProcess.spawnSync("git", ["remote", "-v"]),
+    () => childProcess.spawnSync("getconf", ["PATH"]),
     () => childProcess.spawnSync("git", ["-c", "http.proxy=https://example.invalid", "status"]),
     () => childProcess.spawnSync("git", ["clone", "https://example.invalid/repository.git"]),
     () => childProcess.spawnSync(process.execPath, [tsc, "--noEmit", "https://example.invalid/injected"]),
@@ -252,6 +253,7 @@ test("outbound denial covers direct, promise, datagram, process, and propagated 
     () => childProcess.spawnSync(process.execPath, ["-e", "fetch('https://example.invalid').catch(() => process.exit(2))"], { env: { ...process.env, NODE_OPTIONS: "--require=/tmp/replacement.cjs" } }),
     () => childProcess.spawnSync(process.execPath, ["-e", "fetch('https://example.invalid').catch(() => process.exit(2))"], { env: { ...process.env, PATH: "/tmp" } }),
   ]) assert.throws(operation, /outbound network is denied|denied|cannot|outside/i)
+  assert.equal(childProcess.spawnSync("getconf", ["GNU_LIBC_VERSION"]).error, undefined)
   const child = childProcess.spawnSync(process.execPath, ["-e", "fetch('https://example.invalid').catch(() => process.exit(2))"], { env: { ...process.env } })
   assert.notEqual(child.status, 0); assert.match(child.stderr.toString(), /Outbound network is denied/i)
 })
@@ -315,8 +317,7 @@ function syncTransport(resources: ReturnType<typeof resourcesFromTree>, entryOve
 }
 
 test("runtime contract accepts every supported boundary and rejects adjacent unsupported versions", () => {
-  assert.equal(isSupportedNodeVersion("20.18.99"), false)
-  assert.equal(isSupportedNodeVersion("20.19.0"), true)
+  assert.equal(isSupportedNodeVersion("21.99.99"), false)
   assert.equal(isSupportedNodeVersion("22.0.0"), true)
   assert.equal(isSupportedNodeVersion("24.99.99"), true)
   assert.equal(isSupportedNodeVersion("25.0.0"), false)
